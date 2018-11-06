@@ -1,0 +1,33 @@
+#!/bin/bash -f
+
+echo "+++++++TEST Image++++++++" 
+echo "+++++++command line arguments++++++++"  
+./image  
+./image a b  
+./image a b c  
+./image a b c d   
+
+echo "+++++++TEST 1++++++++"   
+./image pepper.pgm n1.pgm r1.pgm  
+
+echo "+++++++TEST 2++++++++"   
+./image mammoth.pgm n2.pgm r2.pgm  
+
+echo "+++++++TEST 3++++++++"   
+./image baboon.pgm n3.pgm r3.pgm  
+
+echo "+++++++TEST Image Stack++++++++" 
+echo "+++++++TEST 1++++++++" 
+./imagestack pt0.pgm pt8.pgm output1.pgm
+
+echo "+++++++TEST 2++++++++" 
+./imagestack pt0.pgm pt4.pgm pt8.pgm output2.pgm
+
+echo "+++++++TEST 3++++++++" 
+./imagestack pt0.pgm pt1.pgm pt2.pgm pt3.pgm pt4.pgm pt5.pgm pt6.pgm pt7.pgm pt8.pgm output3.pgm
+
+
+echo "+++++++Valgrind++++++++"   
+valgrind ./image test.pgm n0.pgm f0.pgm
+valgrind ./imagestack pt0.pgm pt8.pgm output1.pgm
+
