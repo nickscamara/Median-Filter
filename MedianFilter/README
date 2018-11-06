@@ -1,14 +1,1 @@
-CS515 Assignment 3
-
-Name: <Nicolas Silberstein Camara>
-uid: <nsc1014>
-Section: 1
-
-How many hours did you take to complete this assignment?
-8
-
-How difficult did you find this assignment from a scale of 0-10 where 10 represents the hardest?
-5
-
-What challenges did you encounter? And how did you address them?
-I had trouble with allocating the dynamic 3D array for part 2. I saw that I was allocating it for every image and then I placed outside my "big" for loop so it only allocates once.
+It uses a 3d-dynamic array to allocate the images.
